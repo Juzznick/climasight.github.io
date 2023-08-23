@@ -1,146 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" dir="ltr">
+ 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Neo-Visionary</title>
-    <link rel="icon" href="img/newlogo.png" type="png" />
-    <link rel="stylesheet" href="styles.css" />
-    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=JetBrains Mono'>
-    <script src="main.js"></script>
+  <meta charset="utf-8">
+  <title>ClimaSight</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="img\title.jpg" type="jpg">
 </head>
 
 <body>
-    <div class="navbar">
-        <a href="#home" class="homeBtn">HOME</a>
-        <button onclick="onclik()" class="navBtn" id="navBtn">MENU</button>
-        <ul class="navItems" id="navItems">
-            <li><a href="#home">HOME</a></li>
-            <li><a href="#aboutus">ABOUT US</a></li>
-            <li><a href="#gear">OUR MEMBERS</a></li>
-            <li><a href="#gallery">GALLERY</a></li>
-        </ul>
-    </div>
-
-    <section class="hero">
-        <div class="logo">
-            <img id='home' src="img/hi.png" />
+    <section class="logo">
+        <img src="img\logo.png">
+    </section>
+    <section id="section" class="section">
+        <div class="searchBar">
+            <input type="text" placeholder="Enter city Name" spellcheck="false">
+            <button><img src="img/logo-set2/search.png"></button>
         </div>
-        <!--<div class="logoText">
-            <h1>NEO<br />Visionary</h1>
-        </div>-->
-        
+        <div class="error" style="display: none">
+            <p>Error : Invalid City Name</p>
+        </div>
+        <div class="weather">
+            <img src="img/logo-set2/cloudy.png" class="weatherIcon">
+            <h1 class="temp">22°C</h1>
+            <h2 class="city_name">Thrissur</h2>
+            <div class="details">
+                <div class="col">
+                    <img src="img/logo-set2/humidity.png">
+                    <div>
+                        <p class="humidity">50%</p>
+                        <p>Humidity</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <img src="img/logo-set2/wind.png">
+                    <div>
+                        <p class="wind">50 km/h</p>
+                        <p>Wind Speed</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="details">
+                <div class="col">
+                    <img src="img/logo-set2/feelslike.png">
+                    <div>
+                        <p class="feelsLike">50%</p>
+                        <p>feels like</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <img src="img/logo-set2/sealevel.png">
+                    <div>
+                        <p class="seaLevel">50 km/h</p>
+                        <p>sea level</p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </section>
 
 
-
-    <section class="abtSection">
-        <div>
-            <div class="heading reveal">
-                <h1 id="aboutus">About Us</h1>
-            </div>
-            <div class="desc reveal">
-                <p> 
-                    Welcome to Neo-Visionary, a dynamic and dedicated team comprised of nine exceptional individuals. We are a group of hardworking and 
-                    persistent visionaries who are committed to pushing the boundaries of innovation and achieving remarkable results. With a shared passion 
-                    for excellence, we come together to tackle challenges head-on and transform ideas into reality.Our diverse backgrounds and expertise fuel
-                     our collaborative spirit, enabling us to approach projects from multiple angles and uncover unique solutions. Guided by a relentless pursuit
-                      of excellence, we consistently strive to surpass expectations and set new standards in everything we do.<br/><br/><br/>Neo-Visionary stands as a testament
-                       to our unwavering determination and unwavering work ethic. We are not content with the ordinary; instead, we thrive on the extraordinary. As a 
-                       team, we are dedicated to harnessing our collective talents to create a brighter future and leave an indelible mark on the landscape of innovation.
-                      Join us on this exciting journey as we shape the future, challenge conventions, and redefine what is possible. Together, we are Neo-Visionary 
-                      shaping tomorrow through tenacity, innovation, and boundless ambition.</p>
-            </div>
-        </div>
-        <div class="sideImgs reveal">
-            <img src="img/sticker.jpeg" />
-        </div>
-    </section>
-
-
-    <section class="sections">
-        <div class="heading reveal">
-            <h1 id="gear">Our Members</h1>
-        </div>
-        <div class="desc reveal">
-            <div class="card card1">
-                <img src="img/cards/Nikhil.png">
-            </div>
-            <div class="card card1">
-                <img src="img/cards/Jeswim.png">
-            </div>
-            <div class="card card1">
-                <img src="img/cards/akhil.png">
-            </div>
-            <div class="card card1">
-                <img src="img/cards/aiswarya.png">
-            </div>
-            <div class="card card1">
-                <img src="img/cards/siva.png">
-            </div>
-            <div class="card card1">
-                <img src="img/cards/Jeeva.png">
-            </div>
-            <div class="card card1">
-                <img src="img/cards/rahman.png">
-            </div>
-            <div class="card card1">
-                <img src="img/cards/Nimmy.png">
-            </div>
-            <div class="card card1">
-                <img src="img/cards/rasiya.png">
-            </div>
-        </div>
-        
-    </section>
-
-
-
-    <section class="sections">
-        <div class="heading reveal">
-            <h1 id="gallery">Gallery</h1>
-        </div>
-        <div class="desc reveal">
-            <div class="card card1">
-                <img src="img/img1.jpeg">
-            </div>
-            <div class="card card1">
-                <img src="img/img2.jpeg">
-            </div>
-            <div class="card card1">
-                <img src="img/img3.jpeg">
-            </div>
-            <div class="card card1">
-                <img src="img/img4.jpeg">
-            </div>
-            <div class="card card1">
-                <img src="img/img5.jpeg">
-            </div>
-            <div class="card card1">
-                <img src="img/img6.jpeg">
-            </div>
-            <div class="card card1">
-                <img src="img/img7.jpeg">
-            </div>
-        </div>
-    </section>
-
-    <!--<section class="sections">
-        <div class="heading reveal">
-            <h1 id="contactus">Contact Us</h1>
-        </div>
-        <div class="desc reveal">
-            <h5>Nikhil - 7012240531</h5>
-        </div>
-        <div class="desc reveal">
-            <h5>Jeswin - 7907419593</h5>
-        </div>-->
-        
-
-    </section>
-
+<script type="text/javascript" src="main.js"></script>
 </body>
-
 </html>
